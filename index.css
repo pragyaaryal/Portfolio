@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+:root {
+  --primary: #F9F8F8;
+  --secondary: #2A2D3A;
+  --green: #66A88C;
+  --secondary-light: #7FD1AE;
+  --secondary-light-2: #ADE1CA;
+  --white: #fff;
+  --black: #000000;
+  --shadow: 0px 2px 8px 0px var(--secondary-light);
+}
+
+* {
+scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* Navigation bar */
+.nav {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: var(--primary);
+  padding: 0 8%;
+  box-shadow: var(--shadow);
+}
+
+nav a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--black);
+  text-decoration: none;
+  margin: 0 2rem;
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+/* Home Screen */
+.Home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--primary), var(--secondary-light));
+  padding: 80px;
+}
+
+.text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin: 100px; */
+}
+
+#name {
+  font-size: 2.5rem;
+  color: var(--secondary);
+}
+
+#designation {
+    margin-top: 20px;
+  font-size: 2rem;
+  color: var(--green);
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+  }
+  .scroll-down i{
+    font-size: 1.5rem;
+    color: #2A2D3A;
+    scroll-behavior: smooth;
+ }
+ .scroll-down i:hover {
+    color: var(--white);
+  }
+  
+  
+
+/* About Section */
+.About {
+  font-size: 20px;
+  padding: 6rem;
+  background-color: var(--primary);
+  border-radius: 30px;
+  text-align:justify;
+  margin: 0px 200px 20px 100px;
+}
+
+#About h1{
+    font-size: 40px;
+  color: var(--secondary);
+}
+
+.CV {
+    justify-content: center;
+    text-align: center;
+  background-color: var(--green);
+  border: none;
+  padding: 0.6rem 2rem;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+.CV i{
+    padding-right: 20px;
+}
+.CV a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.CV:hover {
+  background-color: var(--secondary-light);
+}
+
+
+
+/* Sticky connect icons */
+.ConnectIcons {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .ConnectIcons a {
+    margin: 0 0.5rem;
+    color: var(--secondary);
+    font-size: 1.6rem;
+  }
+  
+  .ConnectIcons a:hover {
+    color: var(--green);
+  }
+  
+/* Project */
+#Projects{
+    margin: 0px 100px 20px 150px;
+    padding-bottom: 30px;
+    font-size: 50px;
+}
+
+.Projects{
+    background: var(--secondary-light);
+    padding: 60px 0px 20px 50px;
+}
+
+.Collaborative_Development, .Figma_Prototype, .Weather_Application{
+    display: flex;
+}
+.ProjectDescription h1{
+    padding: 5px;
+    font-size: 30px;
+    color:var(--secondary);
+}
+.ProjectDescription h2{
+    padding: 3px;
+    font-size: 16px;
+    color: #66A88C;
+}
+.ProjectDescription {
+    margin: 0px 10px 20px 80px;
+    padding-top: 30px;
+    flex: 1;
+}
+.ProjectImg {
+    margin: 0px 20px 100px 0px;
+    /* margin-bottom: 50px; */
+    border-radius: 20px;
+    flex: 1.1;
+    background: var(--primary);
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjectImg img{
+    margin: 10px 0px 10px 30px;
+    /* padding-left: 20px; */
+    padding: 30px;
+    /* padding-top: 30px; */
+    width: 90%;
+    /* align-items: center;
+    text-align: center;
+    justify-content: center; */
+}
+
+
+/* Academics Section */
+
+#academics{
+    margin: 0px 100px 20px 150px;
+    font-size: 40px;
+  padding: 4rem;
+  background-color: var(--primary);
+    color: var(--secondary);
+}
+
+#Academics{
+    font-size: 14px;
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    color: var(--green);
+    padding: 20px;
+    margin: 0px 200px 20px 180px;
+}
+
+
+.undergraduate, .highschool {
+    text-decoration: none;
+    color: #2A2D3A;
+    flex: 1;
+    background: linear-gradient(var(--primary), var(--secondary-light));
+    border-radius: 30px;
+    padding: 30px;
+    margin: 30px;
+}
+.undergraduate a, .highschool a{
+    text-decoration: none;
+    color: #2A2D3A;
+}
+.undergraduate:hover a, .highschool:hover a{
+    color:#000000;
+}
+#heraldlogo{
+    width: 50%;
+    padding-bottom: 30px;
+
+}
+#bnkslogo{
+    width: 25%;
+    padding-bottom: 20px;
+}
+
+
+
+
+/* Experience Section */
+#Experience {
+ margin: 0px 100px 20px 150px;
+  padding: 4rem;
+  background-color: var(--primary);
+  /* text-align: center; */
+}
+
+
+
+/* Contact Section */
+
+.Contact h1{
+    padding: 20px 0px;
+    margin: 0px 200px 0px 150px;
+    color:var(--primary);
+}
+
+.Contact h2{
+    padding: 10px 0px;
+    margin: 0px 0px 0px 150px;
+    color:var(--primary);
+    text-decoration: none;
+}
+.Contact{
+  background-color: var(--secondary-light);
+  color:var(--primary);
+  padding-bottom: 50px;
+}
+
+.Contact h2:hover{
+    color:var(--secondary);
+    cursor: pointer;
+}
+.Contact i:hover{
+ color:var(--secondary);
+ cursor: pointer;
+}
+
+.Contact i{
+    color:var(--primary);
+    padding-right: 30px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary);
+  color: var(--white);
+  text-align: center;
+  padding: 0.5rem;
+}
