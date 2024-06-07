@@ -51,6 +51,26 @@ nav a:hover {
   color: var(--green);
 }
 
+/* Sticky connect icons */
+.ConnectIcons {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10;
+}
+
+.ConnectIcons a {
+  margin: 0 0.5rem;
+  color: var(--secondary);
+  font-size: 1.6rem;
+}
+
+.ConnectIcons a:hover {
+  color: var(--green);
+}
+
 /* Home Screen */
 .Home {
   height: 100vh;
@@ -99,11 +119,11 @@ nav a:hover {
 /* About Section */
 .About {
   font-size: 20px;
-  padding: 6rem;
+  padding: 7rem;
   background-color: var(--primary);
   border-radius: 30px;
   text-align:justify;
-  margin: 0px 200px 20px 100px;
+  margin: 0px 200px 50px 100px;
 }
 
 #About h1{
@@ -137,54 +157,53 @@ nav a:hover {
 
 
 
-/* Sticky connect icons */
-.ConnectIcons {
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    flex-direction: row;
-    align-items: center;
-    z-index: 10;
-  }
-  
-  .ConnectIcons a {
-    margin: 0 0.5rem;
-    color: var(--secondary);
-    font-size: 1.6rem;
-  }
-  
-  .ConnectIcons a:hover {
-    color: var(--green);
-  }
+
   
 /* Project */
 #Projects{
-    margin: 0px 100px 20px 150px;
+    margin: 50px 100px 20px 150px;
     padding-bottom: 30px;
     font-size: 50px;
 }
 
 .Projects{
     background: var(--secondary-light);
-    padding: 60px 0px 20px 50px;
+    padding: 20px 0px 0px 50px;
 }
 
 .Collaborative_Development, .Figma_Prototype, .Weather_Application{
     display: flex;
 }
 .ProjectDescription h1{
-    padding: 5px;
-    font-size: 30px;
+    padding: 0px, 0px, 10px, 0px;
+    font-size: 25px;
     color:var(--secondary);
 }
 .ProjectDescription h2{
-    padding: 3px;
-    font-size: 16px;
-    color: #66A88C;
+    padding: 15px, 0px;
+    font-size: 20px;
+    color: var(--white);
 }
+.ProjectDescription p{
+  text-align: justify;
+  margin-right: 50px;
+  justify-content: center;
+  font-size: 18px;
+  align-items: center;
+
+}
+.ProjectDescription p a{
+  text-decoration: none;
+  color:var(--white) ;
+
+}
+.ProjectDescription p a:hover{
+  color:var(--secondary);
+}
+
 .ProjectDescription {
-    margin: 0px 10px 20px 80px;
-    padding-top: 30px;
+    margin: 0px 0px 0px 60px;
+    padding-top: 10px;
     flex: 1;
 }
 .ProjectImg {
@@ -260,12 +279,63 @@ nav a:hover {
 
 
 /* Experience Section */
-#Experience {
- margin: 0px 100px 20px 150px;
-  padding: 4rem;
-  background-color: var(--primary);
+
+.Experience {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
   /* text-align: center; */
 }
+#experience{
+  margin: 50px 100px 0px 150px;
+  font-size: 20px;
+}
+.SSS, .Afristem, .GCY, .ISL,.STK{
+  flex: 1;
+  padding: 1rem;
+  text-decoration: none;
+  color:var(--secondary);
+  text-align: center;
+}
+
+.SSS h1,.Afristem h1, .GCY h1, .STK h1, .ISL h1{
+  text-decoration: none;
+  padding: 3px;
+  font-size: 15px;
+    color:var(--secondary);
+}
+.SSS h2,.Afristem h2, .GCY h2, .STK h2, .ISL h2{
+  text-decoration: none;
+  padding: 2px;
+    font-size: 12px;
+  color: var(--green);
+}
+.SSS h3,.Afristem h3, .GCY h3,  .STK h3, .ISL h3{
+  text-decoration: none;
+  padding: 2px;
+  font-size: 14px;
+  color:var(--secondary);
+}
+
+
+.SSS img, .Afristem img , .GCY img, .STK img, .ISL img {
+  background-color: white;
+  display: block;
+  margin-left: 60px;
+  width: 130px;
+  border: 4px; 
+  border-radius: 10%; 
+  padding: 1% 1%;  
+  /* text-align: center; */
+  /* box-shadow: var(--shadow); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+  
 
 
 
