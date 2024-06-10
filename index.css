@@ -379,15 +379,14 @@ footer {
 /* Media Queries */
 @media only screen and (max-width: 812px) {
   .nav nav a{
-    font-size: 12px;
-    font-weight: 500;
-    margin: 0.5 0.5rem;
+    font-size: 10px;
+    font-weight: 700;
+    margin:0px 12px;
   }
   .nav{
     height: 50px;
     padding: 0px;
-    margin: 0px;
-    
+    margin:0rem;
 
   }
 #name {
@@ -483,22 +482,15 @@ color:var(--secondary);
   }
   
   #experience{
+    margin: 50px 0px 0px 50px;
     font-size: 15px;
   }
-  
   .Experience{
-      /* float: none; */
-      display: block;
-      text-align: center;
-      align-items: center;
+    display: block;
   }
-  .Experience img{
-    align-items: center;
-}
-
 .SSS img, .Afristem img , .GCY img, .STK img, .ISL img {
   display: block;
-  margin-left: 100px;
+  margin-left: 90px;
   width: 120px;
   border: 4px; 
   border-radius: 10%; 
