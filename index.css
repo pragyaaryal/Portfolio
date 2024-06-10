@@ -333,9 +333,6 @@ nav a:hover {
 }
 
 
-  
-
-
 
 /* Contact Section */
 
@@ -380,13 +377,18 @@ footer {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 812px) {
   .nav nav a{
     font-size: 12px;
+    font-weight: 500;
+    margin: 0.5 0.5rem;
   }
   .nav{
     height: 50px;
     padding: 0px;
+    margin: 0px;
+    
+
   }
 #name {
     font-size: 30px;
@@ -479,20 +481,34 @@ color:var(--secondary);
   .Collaborative_Development, .Figma_Prototype, .Weather_Application {
       display: block;
   }
-
-  /* .ProjectImg, .ProjectDescription {
-      flex: 1 1 100%;
-      padding: 0;
-  } */
-
+  
+  #experience{
+    font-size: 15px;
+  }
+  
   .Experience{
-      float: none;
+      /* float: none; */
       display: block;
-      /* text-align: left; */
+      text-align: center;
+      align-items: center;
   }
-  .SSS img, .Afristem img , .GCY img, .STK img, .ISL img {
-     margin-left: 150px;
-  }
+  .Experience img{
+    align-items: center;
+}
+
+.SSS img, .Afristem img , .GCY img, .STK img, .ISL img {
+  display: block;
+  margin-left: 100px;
+  width: 120px;
+  border: 4px; 
+  border-radius: 10%; 
+  padding: 0% 0%;  
+  /* text-align: center; */
+  /* box-shadow: var(--shadow); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
   .Contact{
     font-size: 10px;
     /* text-align: center; */
