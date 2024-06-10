@@ -401,7 +401,7 @@ footer {
     font-size: 15px;
     padding: 0px;
   text-align:justify;
-  margin: 0px 50px 50px 50px;
+  margin: 0px 20px 20px 20px;
 }
 
 #About h1{
@@ -424,16 +424,17 @@ footer {
 .ProjectDescription h1{
   padding: 0px, 0px, 10px, 0px;
   font-size: 20px;
+  margin-left: 10px;
   color:var(--secondary);
 }
 .ProjectDescription h2{
-  padding: 15px, 0px;
   font-size: 18px;
+  margin-left: 10px;
   color: var(--white);
 }
 .ProjectDescription p{
 text-align: justify;
-margin-right: 50px;
+margin: 0px 10px 10px 10px;
 justify-content: center;
 font-size: 14px;
 align-items: center;
@@ -474,7 +475,7 @@ color:var(--secondary);
 }
 
    .Home, .About, .Projects, .Experience, .Contact {
-      padding: 20px;
+      padding: 15px;
   }
 
   .Collaborative_Development, .Figma_Prototype, .Weather_Application {
@@ -512,6 +513,7 @@ color:var(--secondary);
 }
 
 .Contact h2{
+  font-size: 9px;
     padding: 10px 0px;
     margin: 0px 0px 0px 40px;
     color:var(--primary);
