@@ -93,12 +93,38 @@ body {
 .sidebar ul li a.active {
   background: rgba(160, 108, 213, 0.15);
   color: var(--accent);
+  content: none;
 }
 
-.sidebar ul li a:hover {
-  background: rgba(160, 108, 213, 0.10);
-  color: var(--accent);
+.sidebar ul li a {
+  position: relative;
 }
+
+/* Tooltip text */
+.sidebar ul li a:hover::after {
+  content: "Website in progress – more details soon";
+  position: absolute;
+  right: 10%; /* moves tooltip to the right of the link */
+  top: 120%;
+  transform: translateY(-50%);
+  background: #1a1a1a;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Smooth fade-in */
+.sidebar ul li a::after {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
 
 .sidebar ul li a {
   scroll-behavior: smooth;
@@ -194,6 +220,8 @@ footer p{
 
 }
 
+
+
 /* ===============================
    Responsive / Mobile
 ================================= */
@@ -219,9 +247,17 @@ footer p{
     text-align: justify;
   }
 
+  footer{
+    background-color: #f4f1f7;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  
+  }
+
   footer {
     margin-right: 0px;
-    padding: 0rem 2rem;
+    padding: 0rem 0rem;
     text-align: center;
     font-size: 0.9rem;
     color: #555;
