@@ -1,0 +1,203 @@
+/* ---------------------------------
+   GLOBAL STYLES (YOUR VARIABLES)
+--------------------------------- */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap'); */
+
+:root {
+  --bg-color: #fdfcfb;
+  --text-color: #1a1a1a;
+  --accent: #a06cd5;
+  --light-accent: #e0d3f8;
+  --card-bg: #ffffff;
+  --border-color: #e5e1ec;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+/* ------------------------------
+   GENERAL PAGE
+------------------------------ */
+main {
+  padding: 40px;
+  margin-left: 260px; /* space for sidebar */
+  margin-top: 60px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.divider {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+
+
+/* ------------------------------
+   SORT BAR STYLING
+------------------------------ */
+.sort-bar select {
+  appearance: none;           /* remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 10px 16px;
+  min-width: 180px;
+
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z' fill='%23666'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+/* Hover & Focus Effects */
+.sort-bar select:hover {
+  border-color: #a06cd5;
+}
+
+.sort-bar select:focus {
+  outline: none;
+  border-color: #a06cd5;
+  box-shadow: 0 0 6px rgba(160, 108, 213, 0.4);
+}
+
+/* Optional: Add subtle shadow for modern feel */
+.sort-bar select {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* ------------------------------
+   WRITING GRID
+------------------------------ */
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+
+/* ------------------------------
+   CATEGORY TITLES (when sorting by category)
+------------------------------ */
+.category-title {
+  grid-column: 1 / -1;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+
+/* ------------------------------
+   WRITING CARDS
+------------------------------ */
+.writing-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.writing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* Tag */
+.writing-card .tag {
+  display: inline-block;
+  padding: 3px 9px;
+  background: #f4f4f4;
+  font-size: 13px;
+  border-radius: 4px;
+  width: fit-content;
+  color: #333;
+}
+
+/* Thumbnail */
+.writing-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Title */
+.writing-card h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #222;
+}
+
+/* Excerpt */
+.writing-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* Read More Button */
+.read-more {
+  margin-top: auto;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.read-more:hover {
+  background: #444;
+}
+
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+  .contact-navbar{
+    display: none;
+}
+main {
+    margin-left: 0;    /* full width */
+    padding-top: 0px; /* offset for mobile navbar */
+    padding: 4rem 5rem 1rem 5rem;
+    width:100%;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+:root {
+  --bg-color: #fdfcfb;
+  --text-color: #1a1a1a;
+  --accent: #a06cd5;
+  --light-accent: #e0d3f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body.projects-page {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* background-color: #e9e4ee; */
+}
+
+/* Intro Section */
+.projects-intro {
+
+    padding: 40px 20px;
+    max-width: 900px;
+  }
+  
+  .projects-intro h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .projects-intro p {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
+  
+  /* Domain Heading */
+  .domain-heading {
+
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  
+  /* Card Grid */
+  .card-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+  }
+  
+  
+  /* Project Cards */
+  .project-card {
+    background: #fafafa;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    transition: 0.25s ease;
+    border: 1px solid #eee;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+  }
+  
+  .project-card h3 {
+    padding: 15px 18px 5px;
+    font-size: 18px;
+  }
+  
+  .project-card p {
+    padding: 0 18px 18px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  @media (max-width: 768px) {
+.contact-navbar{
+    display: none;
+}
+main {
+    margin-left: 0;    /* full width */
+    padding-top: 0px; /* offset for mobile navbar */
+    padding: 4rem 5rem 1rem 5rem;
+    width:100%;
+    text-align: justify;
+  }
+  }
