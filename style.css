@@ -176,14 +176,6 @@ main {
 }
 
 /* Footer */
-footer{
-  margin-right: 340px;
-  background-color: #f4f1f7;
-  padding: 0rem 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-}
 .mobile-nav {
   display: none; /* hidden on desktop */
 }
@@ -192,6 +184,15 @@ footer{
   display: none;
 }
 
+footer p{
+  margin-right: 340px;
+  background-color: #f4f1f7;
+  padding: 4rem 0rem 1.5rem 0rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+
+}
 
 /* ===============================
    Responsive / Mobile
