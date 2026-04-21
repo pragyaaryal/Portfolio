@@ -1,86 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pragya Aryal | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragya Aryal</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background: #fdfcfb;
+      color: #4B4453;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 750px;
+      margin: 20px auto;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .cv-button {
+      display: inline-block;
+      text-decoration: none;
+      color: #4B4453;
+      border: 1px solid #4B4453;
+      padding: 10px 18px;
+      margin-bottom: 40px;
+    }
+
+    .cv-button:hover {
+      background: #4B4453;
+      color: white;
+    }
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      font-size: 14px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .contact_footer a {
+      color: #4B4453;
+      margin-right: 15px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .contact_footer {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+<h1>Pragya Aryal</h1>
+<p>
+  Computer Science graduate with experience in project management, research, and data analysis, currently exploring public policy and public space design in New York City as a CityGAP Fellow at <a href="https://www.livingcityproject.com">Living City Project</a>. Open to early-career roles in R&D, project management, and data analytics.
+</p>
+<h2>Recent Works</h2>
 
-  <!-- Mobile Top Navbar -->
-  <header class="mobile-nav">
-    <div class="mobile-logo"><a href="index.html" style="text-decoration: none; justify-content: center;">Pragya Aryal</a></div>
-    <button class="hamburger" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
-  </header>
+  <ul>
+    <a href="https://drive.google.com/file/d/13kMIy58ADqjfe-jekFQZnuH3zcHItX-R/view?usp=sharing" target="_blank"><li>Comparative analysis of public spaces in New York City and Kathmandu </li></a>
+    <a href="https://drive.google.com/file/d/1_1OPj-cAjFRwB9MNQXbs7BYI_Th9xEzr/view?usp=sharing"><li>Gender-Sensitive Online Hate Speech Detection in Nepali Politics</li></a>
+    <li>Voting awareness campaign in Nepal (<a href="https://www.instagram.com/howtodeshbikas/">HowtoDeshBikas</a> & <a href="https://www.instagram.com/merovotekopower/">MeroVoteKoPower</a>)</li>
+    <a href="https://shethekranti.pages.dev/"><li>SheTheKranti — Core team member & web developer</li></a>
+  </ul>
 
-  <!-- Sidebar -->
-  <nav class="sidebar">
-    <a href="index.html"><img src="pragya.jpg" alt="Pragya Aryal"></a>
-    <div class="logo"><a href="index.html" style="text-decoration: none;">Pragya Aryal</a></div>
-    <div class="tagline">A Living Archive</div>
-    <ul>
-      <li><a href="index.html"class="active">Home</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">Experience</a></li>
-      <li><a href="">Writing</a></li>
-      <!-- <li><a href="">What's up?</a></li> -->
-    </ul>
-    <br>
-    <div class="contact">
-      <a href="https://www.linkedin.com/in/pragya-aryal-652781212/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="mailto:pragyaaryal18@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-      <a href="https://www.instagram.com/creating_pragya/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://github.com/pragyaaryal" target="_blank"><i class="fa-brands fa-github"></i></a>
-    </div>
-    <br>
-    <br><br>
-    <p style="text-align:center; color: grey; font-size: 0.9; font-weight: 300;">(the website is currently being updated- more details soon!!!)</p>
-  </nav>
+  <a href="cv.pdf" class="cv-button">Download CV</a>
+  <p>
+    I am currently refining this space to better showcase my work and start spamming recruiters. In the meantime, enjoy exploring some of my latest work. (If you have a role that fits me, reach out for moreeee.)
+  </p>
 
-  <!-- Main Content -->
-  <main>
-    <section id="about">
-      <!-- <div class="image"><a href="index.html"><img src="pragya.jpg" alt="Pragya Aryal"></a></div> -->
-      <h2 style="color:#4a0a89;">Hi there! I’m Pragya.</h2> 
-      <div class="small-gap"></div>
-      <p>I create digital projects and lead creative campaigns on anything: <span><i><b>Politics, People & Places.</b></i></span></p>
-      <div class="small-gap"></div>
-      <p>
-        My work blends research, design, data and storytelling — from brand identity and websites to community-driven initiatives and workshops.
-        You may find my work in <a href="https://www.instagram.com/sumanashrestha_official/" target="_blank"> Sumana Shrestha Secretariat</a>, <a href="https://www.instagram.com/howtodeshbikas/"target="_blank">HowtoDeshBikas</a>, <a href="https://shethekranti.org" target="_blank">Shethekranti</a>, <a href="https://www.instagram.com/afri.stem/" target="_blank">AfriSTEM</a> & 
-        <a href="">more</a>. 
-      </p> 
-      <div class="small-gap"></div>
-      <p>
-        I recently graduated with a degree in computer science (first-class honors), but much of what I've learned comes from experiences beyond the classroom.
-        I've had the opportunity to work and learn in Cape Town, Pune, New York, and Kathmandu — where I grew up and call home — and each of these places has shaped how I see the world and approach my work.
-        </p>  
-        <div class="small-gap"></div>      
-      <p>If you want to chat about anything, feel free to email me at <a style="color:#4a0a89;"href="mailto:pragyaaryal18@gmail.com">pragyaaryal18@gmail.com</a> — thanks for stopping by :)</p>
-    </section>
-  </main>
-
-  <!-- Footer -->
   <footer>
     <div class="contact_footer">
       <a href="https://www.linkedin.com/in/pragya-aryal-652781212/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="mailto:pragyaaryal18@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+      <a href="mailto:pragyaaryal18@gmail.com"><i class="fa fa-envelope"></i></a>
       <a href="https://www.instagram.com/creating_pragya/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://github.com/pragyaaryal" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
-    <p>© 2025 Pragya Aryal</p>
+    <p>© 2026 Pragya Aryal</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.querySelector('.sidebar').classList.toggle('open');
-    }
-  </script>
 
 </body>
 </html>

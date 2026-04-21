@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragya Aryal | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Mobile Top Navbar -->
+  <header class="mobile-nav">
+    <div class="mobile-logo"><a href="index.html" style="text-decoration: none; justify-content: center;">Pragya Aryal</a></div>
+    <button class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <a href="index.html"><img src="pragya.jpg" alt="Pragya Aryal"></a>
+    <div class="logo"><a href="index.html" style="text-decoration: none;">Pragya Aryal</a></div>
+    <div class="tagline">A Living Archive</div>
+    <ul>
+      <li><a href="index.html"class="active">Home</a></li>
+      <li><a href="">Projects</a></li>
+      <li><a href="">Experience</a></li>
+      <li><a href="">Writing</a></li>
+      <!-- <li><a href="">What's up?</a></li> -->
+    </ul>
+    <br>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/pragya-aryal-652781212/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:pragyaaryal18@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+      <a href="https://www.instagram.com/creating_pragya/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/pragyaaryal" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <br>
+    <br><br>
+    <p style="text-align:center; color: grey; font-size: 0.9; font-weight: 300;">(the website is currently being updated- more details soon!!!)</p>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about">
+      <!-- <div class="image"><a href="index.html"><img src="pragya.jpg" alt="Pragya Aryal"></a></div> -->
+      <h2 style="color:#4a0a89;">Hi there! I’m Pragya.</h2> 
+      <div class="small-gap"></div>
+      <p>I create digital projects and lead creative campaigns on anything: <span><i><b>Politics, People & Places.</b></i></span></p>
+      <div class="small-gap"></div>
+      <p>
+        My work blends research, design, data and storytelling — from brand identity and websites to community-driven initiatives and workshops.
+        You may find my work in <a href="https://www.instagram.com/sumanashrestha_official/" target="_blank"> Sumana Shrestha Secretariat</a>, <a href="https://www.instagram.com/howtodeshbikas/"target="_blank">HowtoDeshBikas</a>, <a href="https://shethekranti.org" target="_blank">Shethekranti</a>, <a href="https://www.instagram.com/afri.stem/" target="_blank">AfriSTEM</a> & 
+        <a href="">more</a>. 
+      </p> 
+      <div class="small-gap"></div>
+      <p>
+        I recently graduated with a degree in computer science (first-class honors), but much of what I've learned comes from experiences beyond the classroom.
+        I've had the opportunity to work and learn in Cape Town, Pune, New York, and Kathmandu — where I grew up and call home — and each of these places has shaped how I see the world and approach my work.
+        </p>  
+        <div class="small-gap"></div>      
+      <p>If you want to chat about anything, feel free to email me at <a style="color:#4a0a89;"href="mailto:pragyaaryal18@gmail.com">pragyaaryal18@gmail.com</a> — thanks for stopping by :)</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="contact_footer">
+      <a href="https://www.linkedin.com/in/pragya-aryal-652781212/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:pragyaaryal18@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+      <a href="https://www.instagram.com/creating_pragya/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/pragyaaryal" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <p>© 2025 Pragya Aryal</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
