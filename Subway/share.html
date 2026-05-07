@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subway Stories</title>
+
+<link rel="stylesheet" href="share.css">
+<link rel="stylesheet" href="color.css">
+</head>
+
+<body>
+    <!-- Site navigation -->
+<nav>
+
+    <a href="map.html">
+      <div class="logo-small">
+        <img src="logo.png" alt="">
+      </div>
+    </a>
+  
+    <!-- Desktop nav -->
+    <div class="nav-links">
+      <a href="map.html">Maps & Stories</a>
+      <a href="writings.html">Writings</a>
+      <a href="share.html">Share your story</a>
+    </div>
+  
+    <!-- Hamburger -->
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+  
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="map.html">Maps & Stories</a>
+      <a href="writings.html">Writings</a>
+      <a href="share.html">Share your story</a>
+    </div>
+  
+  </nav>
+
+<div class="stories-container" id="storiesContainer"></div>
+
+<button class="add-btn" id="addBtn">+</button>
+
+<div class="popup hidden" id="popup">
+  <div class="popup-content">
+
+    <button class="close-btn" id="closePopup">✕</button>
+
+    <h2 id="promptText"></h2>
+
+    <textarea id="storyInput" maxlength="300" placeholder="Write your subway memory..."></textarea>
+    <input id="stationInput" placeholder="Subway station">
+    <select id="lineInput">
+        <option value="">Select subway line</option>
+      
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      
+        <option value="7">7</option>
+      
+        <option value="A">A</option>
+        <option value="C">C</option>
+        <option value="E">E</option>
+      
+        <option value="B">B</option>
+        <option value="D">D</option>
+        <option value="F">F</option>
+        <option value="M">M</option>
+      
+        <option value="G">G</option>
+        <option value="L">L</option>
+      
+        <option value="N">N</option>
+        <option value="Q">Q</option>
+        <option value="R">R</option>
+        <option value="W">W</option>
+      
+        <option value="J">J</option>
+        <option value="Z">Z</option>
+      
+        <option value="S">S</option>
+      </select>
+
+    <button id="submitStory">Share Story</button>
+
+  </div>
+</div>
+<script>  
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+</script>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+  onSnapshot,
+  query,
+  orderBy
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAo54CXcJq4_m7i3aBIOrpMrDrNLpSpkpw",
+  authDomain: "subway-stories-f1fbc.firebaseapp.com",
+  projectId: "subway-stories-f1fbc",
+  storageBucket: "subway-stories-f1fbc.firebasestorage.app",
+  messagingSenderId: "643144307956",
+  appId: "1:643144307956:web:0a4f0882cb0dda9c387aa1"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/* PROMPTS */
+const prompts = [
+  "The first time I rode the subway…",
+  "The wildest, sweetest, weirdest thing I’ve ever seen…",
+  "When I ride the train… my routine, my seat, my favorite train…",
+  "The best thing I ever saw underground…",
+  "The most beautiful experience I have ever had on the subway…",
+  "What does the community look like on the subway? Have you seen it? Felt it? Experienced it?",
+  "Ways the subway connects and links us…",
+  "Compare the subway to other things you love…",
+  "Write a love letter to the subway - what do you love about it and why…",
+  "Make a list of questions you have for the subway…",
+  "What do you love about the subway?",
+  "What frustrates you about it?",
+  "Favorite train and why?",
+  "Favorite scene from a movie, book, TV show featuring the subway…",
+  "Story you’ll never forget from riding the subway..."
+];
+
+/* COLORS */
+function getColor(route) {
+  const colors = {
+    "1":"#EE352E","2":"#EE352E","3":"#EE352E",
+    "4":"#00933C","5":"#00933C","6":"#00933C",
+    "7":"#B933AD",
+    "A":"#0039A6","C":"#0039A6","E":"#0039A6",
+    "B":"#FF6319","D":"#FF6319","F":"#FF6319","M":"#FF6319",
+    "G":"#6CBE45",
+    "L":"#A7A9AC",
+    "N":"#FCCC0A","Q":"#FCCC0A","R":"#FCCC0A","W":"#FCCC0A",
+    "J":"#996633","Z":"#996633",
+    "S":"#808183"
+  };
+  return colors[route?.toUpperCase()] || "#111";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const addBtn = document.getElementById("addBtn");
+  const popup = document.getElementById("popup");
+  const closePopup = document.getElementById("closePopup");
+
+  const promptText = document.getElementById("promptText");
+
+  const storyInput = document.getElementById("storyInput");
+  const stationInput = document.getElementById("stationInput");
+  const lineInput = document.getElementById("lineInput");
+
+  const submitStory = document.getElementById("submitStory");
+  const storiesContainer = document.getElementById("storiesContainer");
+
+  /* OPEN POPUP */
+  addBtn.addEventListener("click", () => {
+    popup.classList.remove("hidden");
+    promptText.innerText =
+      prompts[Math.floor(Math.random() * prompts.length)];
+  });
+
+  /* CLOSE */
+  closePopup.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.classList.add("hidden");
+  });
+
+  /* SUBMIT */
+  submitStory.addEventListener("click", async () => {
+    if (!storyInput.value.trim()) return;
+
+    await addDoc(collection(db, "stories"), {
+      text: storyInput.value,
+      station: stationInput.value,
+      line: lineInput.value,
+      prompt: promptText.innerText,
+      createdAt: serverTimestamp()
+    });
+
+    storyInput.value = "";
+    stationInput.value = "";
+    lineInput.value = "";
+
+    popup.classList.add("hidden");
+  });
+
+  /* FETCH */
+  const q = query(collection(db, "stories"), orderBy("createdAt", "desc"));
+
+  onSnapshot(q, (snapshot) => {
+    storiesContainer.innerHTML = "";
+
+    snapshot.forEach((doc) => {
+      const story = doc.data();
+
+      const date = story.createdAt?.toDate
+        ? story.createdAt.toDate().toLocaleString()
+        : "Just now";
+
+      const color = getColor(story.line);
+
+      const card = document.createElement("div");
+
+      card.innerHTML = `
+        <div class="metro-card">
+
+          <div class="metro-header">
+            <div class="station">${story.station || "Unknown Station"}</div>
+            <div class="line" style="background:${color}">
+              ${story.line || "?"}
+            </div>
+          </div>
+
+          <div class="metro-text">${story.text}</div>
+
+          <div class="metro-meta">${date}</div>
+
+          <div class="metro-prompt">${story.prompt}</div>
+
+        </div>
+      `;
+
+      storiesContainer.appendChild(card);
+    });
+  });
+
+});
+
+</script>
+
+</body>
+</html>
