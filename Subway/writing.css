@@ -1,0 +1,145 @@
+/* SUBWAY AD STRIP */
+.subway-seats{
+    background-image: url(paper.png);
+}
+.advertisements {
+    width: 100%;
+    overflow: hidden;
+    background: #bcd5f7;
+    background-image:url(navbar.png);
+    padding: 14px 0 0 0;
+    /* border-top: 2px solid #222;
+    border-bottom: 2px solid #222; */
+    margin-top: 100px;
+    margin-bottom:-26px ;
+  }
+  
+  .ad-track {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: max-content;
+    animation: subwayAds 35s linear infinite;
+  }
+  
+  .ad {
+
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+    transition: transform 0.3s ease;
+    border: rgb(255, 255, 255) 1px solid;
+  }
+  
+  .ad:hover {
+    transform: scale(1.05);
+  }
+  
+  /* different subway-ad sizes */
+  
+  .square {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .rectangle {
+    width: 180px;
+    height: 120px;
+  }
+  
+  .wide {
+    width: 240px;
+    height: 100px;
+  }
+  
+  @keyframes subwayAds {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .subway-scene {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3000px;
+
+  }
+  
+  .subway-image {
+    width: 100%;
+    display: block;
+  }
+  
+  /* ALL CLICKABLE AREAS */
+  
+  .hotspot {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    background: rgba(0,0,0,0.65);
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .hotspot:hover {
+    /* background: #111; */
+    transform: scale(1.05);
+  }
+  
+  /* LEFT MAP */
+  
+  .map-link {
+    top: 10%;
+    left: 9%;
+    padding: 150px;
+    border-radius: 5px;
+
+
+  }
+  /* Center */
+  .fav-space {
+    top: 13%;
+    right: 32%;
+    padding: 50px 250px;
+    border-radius: 5px;
+
+  }
+  
+  
+  /* RIGHT POEM */
+  
+  .poem-link {
+    top: 16%;
+    right: 10%;
+    padding: 130px;
+    border-radius: 5px;
+
+  }
+  
+  /* SEAT LINKS */
+  
+  .seat1 {
+    bottom: 28%;
+    left: 22%;
+  }
+  
+  .seat2 {
+    bottom: 30%;
+    left: 38%;
+  }
+  
+  .seat3 {
+    bottom: 26%;
+    left: 56%;
+  }
+  
+  .seat4 {
+    bottom: 29%;
+    left: 73%;
+  }

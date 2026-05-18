@@ -33,6 +33,12 @@ body{
     align-items:center;
     margin-bottom:10px;
   }
+  .metro-name {
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.8;
+    font-size:x-small;
+  }
   
   .station{
     font-weight:700;
@@ -158,8 +164,8 @@ body{
   }
   
   /* MOBILE */
-  @media(max-width:768px){
+  /* @media(max-width:768px){
     .stories-container{
       column-count:1;
     }
-  }
+  } */
