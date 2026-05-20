@@ -7,7 +7,7 @@ window.STORIES = [
     lng: -73.9901,
     text: "bla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabl bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaabla bla blaaaa",
     date: "Oct 12, 2024 • 11:45 PM",
-    image: "../Subway/images/trial.jpg"
+    image: "../Subway/images/1.png"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ window.STORIES = [
     lng: -73.9723,
     text: "bla bla blaaaa",
     date: "Oct 12, 2024 • 11:45 PM",
-    image: "../Subway/images/trial.jpg"
+    image: "../Subway/images/2.png"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ window.STORIES = [
     lng: -73.9867,
     text: "bla bla blaaaa",
     date: "Oct 12, 2024 • 11:45 PM",
-    image: "../Subway/images/trial.jpg"
+    image: "../Subway/images/3.png"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ window.STORIES = [
     lng: -73.9772,
     text: "bla bla blaaaa",
     date: "Oct 12, 2024 • 11:45 PM",
-    image: "../Subway/images/trial.jpg"
+    image: "../Subway/images/4.png"
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ window.STORIES = [
     lng: -73.8910,
     text: "bla bla blaaaa",
     date: "Oct 12, 2024 • 11:45 PM",
-    image: "../Subway/images/trial.jpg"
+    image: "../Subway/images/5.png"
   },
   {
     id: 6,

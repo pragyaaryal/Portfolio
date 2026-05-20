@@ -1,0 +1,42 @@
+/* MAIN CONTAINER */
+.public-space {
+    max-width: 780px;
+    margin: 200px auto;
+    padding: 0 26px;
+  }
+  
+  /* SECTIONS */
+  .block {
+    margin-bottom: 90px;
+  }
+  
+  /* TEXT */
+  .public-space p {
+    margin-bottom: 20px;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: #1f1f1f;
+  }
+  
+  /* IMAGES */
+  .content-image {
+    width: 100%;
+    margin: 24px 0;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  
+    /* subtle depth */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  
+  /* VIDEO */
+  .content-video {
+    width: 100%;
+    margin: 24px 0;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  
+    /* same subtle depth */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  

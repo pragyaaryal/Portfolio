@@ -1,17 +1,14 @@
-/* SUBWAY AD STRIP */
-.subway-seats{
-    background-image: url(paper.png);
-}
+
 .advertisements {
+  margin-top: 70px;
     width: 100%;
     overflow: hidden;
-    background: #bcd5f7;
-    background-image:url(navbar.png);
+    background-image:url(ad.png);
     padding: 14px 0 0 0;
     /* border-top: 2px solid #222;
     border-bottom: 2px solid #222; */
-    margin-top: 100px;
-    margin-bottom:-26px ;
+    margin-bottom:-82px ;
+    padding: 30px;
   }
   
   .ad-track {
@@ -24,6 +21,8 @@
   
   .ad {
 
+
+      flex-shrink: 0;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
@@ -49,7 +48,7 @@
   
   .wide {
     width: 240px;
-    height: 100px;
+    height: 90px;
   }
   
   @keyframes subwayAds {
@@ -61,17 +60,54 @@
       transform: translateX(-50%);
     }
   }
+/* MOBILE AD STRIP */
 
+@media (max-width: 768px) {
+
+    .advertisements {
+      /* margin-top: 70px; */
+      margin-bottom: -10px;
+      padding: 10px 0 0 0;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .ad-track {
+      gap: 10px;
+      animation: subwayAds 22s linear infinite;
+    }
+  
+    .ad {
+      border-radius: 6px;
+    }
+  
+    /* SMALLER ADS */
+  
+    .square {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .rectangle {
+      width: 110px;
+      height: 70px;
+    }
+  
+    .wide {
+      width: 150px;
+      height: 70px;
+    }
+  
+  }
   .subway-scene {
     position: relative;
     width: 100%;
-    margin-bottom: 3000px;
-
   }
   
   .subway-image {
     width: 100%;
     display: block;
+    margin-bottom: 0px;
   }
   
   /* ALL CLICKABLE AREAS */
@@ -80,7 +116,7 @@
     position: absolute;
     text-decoration: none;
     color: white;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0, 42, 255, 0.10);
     padding: 8px 12px;
     border-radius: 999px;
     font-size: 14px;
@@ -95,19 +131,27 @@
   /* LEFT MAP */
   
   .map-link {
-    top: 10%;
-    left: 9%;
-    padding: 150px;
-    border-radius: 5px;
-
-
+    top: 15%;
+    left: 10%;
+    padding: 152px 130px;
+    border-radius: 1px;
+  
+    background-image: url("subway-map.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   /* Center */
   .fav-space {
-    top: 13%;
-    right: 32%;
-    padding: 50px 250px;
+    color: white;
+    top: 25%;
+    right: 36.5%;
+    padding: 30px 195px;
     border-radius: 5px;
+    background-image: url("share.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
   }
   
@@ -115,9 +159,9 @@
   /* RIGHT POEM */
   
   .poem-link {
-    top: 16%;
+    top: 23%;
     right: 10%;
-    padding: 130px;
+    padding: 102px 125px;
     border-radius: 5px;
 
   }
@@ -125,21 +169,135 @@
   /* SEAT LINKS */
   
   .seat1 {
-    bottom: 28%;
-    left: 22%;
+    bottom: 13.5%;
+    left: 4%;
+    padding: 75px 75px;
+    border-radius: 100px;
   }
   
   .seat2 {
-    bottom: 30%;
-    left: 38%;
+    bottom: 13%;
+    left: 16.5%;
+    padding: 72px 72px;
+    border-radius: 100px;
   }
   
   .seat3 {
-    bottom: 26%;
-    left: 56%;
+    bottom: 13%;
+    left: 28%;
+    padding: 70px 70px;
+    border-radius: 100px;
   }
   
   .seat4 {
-    bottom: 29%;
-    left: 73%;
+    bottom: 13%;
+    left: 40%;
+    padding: 72px 72px;
+    border-radius: 100px;
+  }
+
+  .seat5 {
+    bottom: 14.5%;
+    left: 52.5%;
+    padding: 60px 62px;
+    border-radius: 100px;
+  }
+  
+  .seat6 {
+    bottom: 13%;
+    left: 62.5%;
+    padding: 72px 72px;
+    border-radius: 100px;
+  }
+  
+  .seat7 {
+    bottom: 13%;
+    left: 73.5%;
+    padding: 73px 72px;
+    border-radius: 100px;
+  }
+
+
+  /* MOBILE VIEW */
+
+@media (max-width: 768px) {
+
+    .subway-scene {
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .subway-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .hotspot {
+      font-size: 10px;
+      padding: 6px 8px;
+    }
+  
+    /* LEFT MAP */
+  
+    .map-link {
+      top: 9%;
+      left: 4%;
+      padding: 55px;
+      border-radius: 4px;
+    }
+  
+    /* CENTER SPACE */
+  
+    .fav-space {
+      top: 12%;
+      right: 22%;
+      padding: 25px 90px;
+      border-radius: 4px;
+    }
+  
+    /* RIGHT POEM */
+  
+    .poem-link {
+      top: 12%;
+      right: 4%;
+      padding: 48px;
+      border-radius: 4px;
+    }
+  
+    /* SEATS */
+  
+    .seat1 {
+      bottom: 18%;
+      left: 10%;
+    }
+  
+    .seat2 {
+      bottom: 19%;
+      left: 33%;
+    }
+  
+    .seat3 {
+      bottom: 18%;
+      left: 56%;
+    }
+  
+    .seat4 {
+      bottom: 19%;
+      left: 77%;
+    }
+    .seat5 {
+      bottom: 19%;
+      left: 33%;
+    }
+  
+    .seat6 {
+      bottom: 18%;
+      left: 56%;
+    }
+  
+    .seat7 {
+      bottom: 19%;
+      left: 77%;
+    }
+  
   }
