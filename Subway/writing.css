@@ -116,7 +116,7 @@
     position: absolute;
     text-decoration: none;
     color: white;
-    background: rgba(0, 42, 255, 0.10);
+    background: rgba(0, 42, 255, 0.15);
     padding: 8px 12px;
     border-radius: 999px;
     font-size: 14px;
@@ -217,10 +217,18 @@
     border-radius: 100px;
   }
 
+  .seat8 {
+    position: fixed;
+    bottom: 1%;
+    left: 88.5%;
+    padding: 10px 20px;
+    color: white;
+    background: rgba(0, 42, 255, 0.85);
+  }
+
 
   /* MOBILE VIEW */
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
 
     .subway-scene {
       width: 100%;
@@ -230,74 +238,92 @@
     .subway-image {
       width: 100%;
       height: auto;
+      display: block;
     }
   
+    /* ALL HOTSPOTS */
+  
     .hotspot {
+      position: absolute;
+      padding: 4px 6px;
       font-size: 10px;
-      padding: 6px 8px;
+      border-radius: 999px;
     }
   
     /* LEFT MAP */
   
     .map-link {
-      top: 9%;
-      left: 4%;
-      padding: 55px;
-      border-radius: 4px;
+      top: 16%;
+      left: 10%;
+      padding: 55px 48px;
+  
+      background-size: cover;
+      background-position: center;
+      border-radius: 2px;
     }
   
-    /* CENTER SPACE */
+    /* CENTER SHARE AREA */
   
     .fav-space {
-      top: 12%;
-      right: 22%;
-      padding: 25px 90px;
-      border-radius: 4px;
+      top: 24%;
+      right: 38%;
+      padding: 12px 62px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 3px;
     }
   
     /* RIGHT POEM */
   
     .poem-link {
-      top: 12%;
-      right: 4%;
-      padding: 48px;
-      border-radius: 4px;
+      top: 23%;
+      right: 10%;
+      padding: 40px 48px;
+      border-radius: 3px;
     }
   
     /* SEATS */
   
     .seat1 {
-      bottom: 18%;
-      left: 10%;
+      bottom: 13%;
+      left: 4%;
+      padding: 28px 28px;
     }
   
     .seat2 {
-      bottom: 19%;
-      left: 33%;
+      bottom: 12%;
+      left: 16%;
+      padding: 28px 28px;
     }
   
     .seat3 {
-      bottom: 18%;
-      left: 56%;
+      bottom: 13%;
+      left: 28%;
+      padding: 26px 28px;
     }
   
     .seat4 {
-      bottom: 19%;
-      left: 77%;
+      bottom: 11%;
+      left: 40%;
+      padding: 29px 28px;
     }
+  
     .seat5 {
-      bottom: 19%;
-      left: 33%;
+      bottom: 12%;
+      left: 52%;
+      padding: 26px 26px;
     }
   
     .seat6 {
-      bottom: 18%;
-      left: 56%;
+      bottom: 12%;
+      left: 62%;
+      padding: 30px 30px;
     }
   
     .seat7 {
-      bottom: 19%;
-      left: 77%;
+      bottom: 11%;
+      left: 73%;
+      padding: 30px 30px;
     }
   
   }

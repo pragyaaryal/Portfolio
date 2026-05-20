@@ -1,8 +1,7 @@
 /* MAIN CONTAINER */
 .public-space {
-    max-width: 780px;
-    margin: 200px auto;
-    padding: 0 26px;
+  background-image: url(../paper.png);
+    padding: 130px 200px;
   }
   
   /* SECTIONS */

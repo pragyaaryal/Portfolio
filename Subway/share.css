@@ -1,10 +1,15 @@
 body{
     margin:0;
-    background:url(paper.png);
+    background:url(shareQR.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
   }
   
   /* STORIES */
   .stories-container{
+    
     column-count:3;
     column-gap:18px;
     padding:120px 20px;
@@ -81,7 +86,7 @@ body{
   .metro-prompt{
     margin-top:10px;
     font-size:10px;
-    font-style:italic;
+    /* font-style:italic; */
     opacity:0.6;
   }
   
@@ -163,8 +168,8 @@ body{
   }
   
   /* MOBILE */
-  /* @media(max-width:768px){
+  @media(max-width:768px){
     .stories-container{
       column-count:1;
     }
-  } */
+  }
