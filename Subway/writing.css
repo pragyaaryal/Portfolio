@@ -16,7 +16,7 @@
     align-items: center;
     gap: 18px;
     width: max-content;
-    animation: subwayAds 35s linear infinite;
+    animation: subwayAds 40s linear infinite;
   }
   
   .ad {
@@ -218,12 +218,10 @@
   }
 
   .seat8 {
-    position: fixed;
-    bottom: 1%;
-    left: 88.5%;
-    padding: 10px 20px;
-    color: white;
-    background: rgba(0, 42, 255, 0.85);
+    bottom: 13%;
+    left: 84.5%;
+    padding: 72px 72px;
+    border-radius: 100px;
   }
 
 
