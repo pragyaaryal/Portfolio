@@ -1,41 +1,224 @@
-/* MAIN CONTAINER */
+/* ------------------------------------
+   GLOBAL PAGE CONTAINER
+------------------------------------ */
+body{
+  background-image:url(../paper.png);
+
+}
 .public-space {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px;
   background-image: url(../paper.png);
-    padding: 130px 200px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+/* ------------------------------------
+   TYPOGRAPHY
+------------------------------------ */
+
+.public-space h1 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  color: #111;
+}
+
+.public-space p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #1f1f1f;
+  margin-bottom: 18px;
+}
+
+.public-space ul {
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.public-space li {
+  margin-bottom: 20px;
+}
+
+.public-space blockquote {
+  font-size: 18px;
+  line-height: 1.7;
+  border-left: 3px solid #111;
+  padding-left: 16px;
+  margin: 30px 0;
+  color: #333;
+}
+
+
+/* ------------------------------------
+   IMAGES + VIDEOS
+------------------------------------ */
+
+.content-image,
+.content-video {
+  width: 100%;
+  margin: 24px 0;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.content-video {
+  display: block;
+}
+
+
+/* ------------------------------------
+   SIDE IMAGE LAYOUT (OPTIONAL)
+------------------------------------ */
+
+.side-block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.side-image {
+  width: 45%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.side-block p {
+  width: 55%;
+}
+
+
+/* ------------------------------------
+   STORY NAVIGATION (PREV / NEXT)
+------------------------------------ */
+
+.story-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.story-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #111;
+  transition: opacity 0.2s ease;
+}
+
+.story-nav a:hover {
+  opacity: 0.6;
+}
+
+
+
+/* Story- Metro Card */
+/* =========================
+   BASE CARD
+========================= */
+.parent-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  align-items: flex-start;
+}
+.metro-card{
+  background: #fffdf9;
+  border-radius: 16px;
+  padding: 16px;
+  border-left: 5px solid #2718D0;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
+  /* FLEX BEHAVIOR */
+  flex: 1 1 280px;   /* grow | shrink | base width */
+  max-width: 420px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.metro-card.small{
+  flex: 1 1 220px;
+}
+
+.metro-card.medium{
+  flex: 1 1 300px;
+}
+
+.metro-card.large{
+  flex: 2 1 420px;   /* takes more horizontal space */
+}
+
+.metro-card.xl{
+  flex: 3 1 520px;   /* feature card */
+}
+
+.metro-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.metro-text{
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.metro-quote{
+  font-style: italic;
+  margin: 10px 0;
+  padding-left: 22px;
+  border-left: 3px solid #aaa;
+  opacity: 0.75;
+  line-height: 1.7;
+}
+
+.metro-meta{
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+
+
+/* ------------------------------------
+   RESPONSIVE DESIGN
+------------------------------------ */
+
+@media (max-width: 768px) {
+
+  .public-space {
+    padding: 90px 18px;
   }
-  
-  /* SECTIONS */
-  .block {
-    margin-bottom: 90px;
+
+  .public-space h1 {
+    font-size: 26px;
   }
-  
-  /* TEXT */
+
   .public-space p {
-    margin-bottom: 20px;
-    font-size: 16.5px;
-    line-height: 1.75;
-    color: #1f1f1f;
+    font-size: 15.5px;
   }
-  
-  /* IMAGES */
-  .content-image {
+
+  .side-block {
+    flex-direction: column;
+  }
+
+  .side-image,
+  .side-block p {
     width: 100%;
-    margin: 24px 0;
-    border-radius: 10px;
-    border: 1px solid #eee;
-  
-    /* subtle depth */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   }
-  
-  /* VIDEO */
-  .content-video {
-    width: 100%;
-    margin: 24px 0;
-    border-radius: 10px;
-    border: 1px solid #eee;
-  
-    /* same subtle depth */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+  .story-nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
   }
-  
+
+}

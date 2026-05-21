@@ -145,8 +145,8 @@ menuToggle.addEventListener('click', () => {
    1. CREATE THE BASE MAP
 ------------------------------------ */
 const nycBounds = L.latLngBounds(
-  [40.4774, -74.2591], // southwest corner
-  [40.9176, -73.7004]  // northeast corner
+  [40.35, -74.45], // southwest
+  [41.05, -73.45]  // northeast
 );
 
 var map = L.map('map', {
@@ -169,17 +169,49 @@ let stationMarkers = [];
 function createPopup(story) {
   return `
     <div class="story-popup">
-      <div class="popup-image" style="background-image:url('${story.image}')"></div>
+      
+      <div 
+        class="popup-image" 
+        style="background-image:url('${story.image}')">
+      </div>
+
       <div class="popup-body">
-        <div class="popup-title">${story.title}</div>
-        <div class="meta-top">${story.date}</div>
-        <div class="story-text">${story.text}</div>
-        <div class="location-small">📍 ${story.stationName}</div>
+
+        <div class="popup-title">
+          ${story.title}
+        </div>
+
+        <div class="meta-top">
+          ${story.date}
+        </div>
+
+        <div class="story-text">
+          ${story.text}
+        </div>
+
+        ${
+          story.readMoreLink
+            ? `
+              <div class="read-more-wrapper">
+                <a 
+                  href="${story.readMoreLink}" 
+                  class="read-more-btn"
+                >
+                  Read More
+                </a>
+              </div>
+            `
+            : ""
+        }
+
+        <div class="location-small">
+          📍 ${story.stationName}
+        </div>
+
       </div>
     </div>
   `;
 }
-
 /* ------------------------------------
    3. ADD STORY MARKERS FROM stories.js
 ------------------------------------ */
