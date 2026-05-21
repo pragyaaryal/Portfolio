@@ -34,7 +34,7 @@ window.STORIES = [
     lat: 40.5773,
     lng: -73.9818,
     text: "Piss and Weed, that was my first impression of the New York City Subway. My first subway ride was on September 1, 2025 when I came here with my aunt’s family from Long Island to go to Coney Island. I didn't even realize when we had switched from the Long Island Rail Road (LIRR) to the underground subway station.",
-    readMoreLink: "./essays/fav.html",
+    readMoreLink: "./essays/first.html",
     date: "Sept 1, 2025 • 13:56 PM",
     image: "../Subway/images/5.png"
   },
@@ -56,7 +56,7 @@ window.STORIES = [
     lat: 40.7550,
     lng: -73.9867,
     text: "One of the many reasons I like New York is because of its people, who are infamous for being rude. In reality, New Yorkers are the kindest people I have ever met; however, they are also the most annoyed people, and rightfully so",
-    readMoreLink: "./essays/express.html",
+    readMoreLink: "./essays/etiquette.html",
     date: "December 3, 2025 • 17:14 PM",
     image: "../Subway/images/41.png"
   },
